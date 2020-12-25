@@ -206,6 +206,11 @@ async def disconnect():
         _board = None
 
 
+@method
+async def reset():
+    await get_board().send_reset()
+
+
 async def on_shutdown(app):
     await disconnect()
     
